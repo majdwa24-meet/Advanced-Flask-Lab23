@@ -9,9 +9,9 @@ app = Flask(  # Create a flask app
 )
 
 # Variables for tasks
-image_link = "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de254f85f1762feee30d664_meet_logo_red.png"
+image_link = "https://cdn.vox-cdn.com/thumbor/SbX1VbxJhxijxD1tzRTJ8uq38P4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19101461/spider_man_far_from_home_peter_parker_1562394390.jpg"
 
-user_bio = "Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
+user_bio = "enough"
 
 posts = {
     "https://imageio.forbes.com/blogs-images/samarmarwan/files/2018/03/MEET-Students-1200x800.jpg": "Group projects <3",
@@ -25,7 +25,7 @@ posts = {
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
+    return render_template('index.html',i_l=image_link,u_b=user_bio,p=posts)
 
 
 @app.route('/about')  # '/' for the default page
